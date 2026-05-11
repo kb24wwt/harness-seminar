@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E \"\\(^[^/]*\\\\.ts$|/[^/]*\\\\.ts$\\)\")",
+      "Bash(grep -E \"\\\\.rs$\")",
+      "Bash(xargs -I {} sh -c 'echo \"=== {} ===\" && grep -h \"\\\\\"description\\\\\"\" D:/opencode/packages/{}/package.json 2>/dev/null | head -1')",
+      "Bash(xargs -I {} sh -c 'echo \"=== {} ===\" && \\(head -5 {}/package.json 2>/dev/null | grep -E \"name|description\" || echo \"N/A\"\\)')",
+      "Bash(gh auth *)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}
